@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Quote = (props) =>{
     const {q,id} = props;
@@ -7,4 +8,9 @@ const Quote = (props) =>{
   );
 }
 
+Quote.propTypes = {
+  q: PropTypes.string,
+  id: PropTypes.number,
+  DeleteQuote: PropTypes.func
+}
 export default Quote;

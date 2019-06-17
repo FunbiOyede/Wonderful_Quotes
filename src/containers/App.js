@@ -2,7 +2,10 @@ import React,{Component} from 'react';
 import Input from '../components/Input';
 import Quotes from '../components/Quotes';
 import Footer from '../components/Footer';
+import TextContext from '../components/TextContext'
 import './App.css';
+
+import AppContext from '../components/AppContext';
 
 class App extends Component {
 
@@ -51,11 +54,15 @@ class App extends Component {
     if(this.state.counter > 10){
      alert("quotes filled ");
      this.setState({
-       counter:10
+       counter:this.state.denuminatorCounter
      })
+    } else if(this.state.counter < 0){
+      this.setState({
+        counter:0
+      })
     }
     return (
-      <div className="App">
+      <AppContext>
         <h2>{this.state.Quote ? "Adding Quotes" : "Quotes"}</h2><p>{this.state.counter}/10</p>
         <Input
         getQuotes={this.getQuotes}
@@ -64,8 +71,8 @@ class App extends Component {
          />
         <Quotes quotes={this.state.quotes} DeleteQuote={this.DeleteQuote} />
         <Footer />
-
-      </div>
+        <TextContext />
+      </AppContext>
     );
   }
 

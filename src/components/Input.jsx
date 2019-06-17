@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Input = (props) =>{
     return(
@@ -10,4 +11,8 @@ const Input = (props) =>{
     );
 }
 
+Input.propTypes = {
+    getQuotes: PropTypes.func,
+    submitQuotes: PropTypes.func
+}
 export default Input;
