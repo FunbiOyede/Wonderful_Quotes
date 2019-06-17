@@ -40,13 +40,20 @@ class App extends Component {
   DeleteQuote = (id) =>{
   const quotes = this.state.quotes.slice();
   quotes.splice(id,1);
-  this.setState({
-    quotes,
-    counter: this.state.counter - 1
-  })
+    this.setState({
+      quotes,
+      counter: this.state.counter - 1
+    })
   }
+
   render(){
    
+    if(this.state.counter > 10){
+     alert("quotes filled ");
+     this.setState({
+       counter:10
+     })
+    }
     return (
       <div className="App">
         <h2>{this.state.Quote ? "Adding Quotes" : "Quotes"}</h2><p>{this.state.counter}/10</p>
