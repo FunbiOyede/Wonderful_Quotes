@@ -2,9 +2,9 @@ import React,{Component} from 'react';
 import Input from '../components/Input';
 import Quotes from '../components/Quotes';
 import Footer from '../components/Footer';
-import TextContext from '../components/TextContext'
-import './App.css';
 
+import './App.css';
+import Header from '../components/Header'
 import AppContext from '../components/AppContext';
 
 class App extends Component {
@@ -63,6 +63,7 @@ class App extends Component {
     }
     return (
       <AppContext>
+        <Header />
         <h2>{this.state.Quote ? "Adding Quotes" : "Quotes"}</h2><p>{this.state.counter}/10</p>
         <Input
         getQuotes={this.getQuotes}
@@ -71,7 +72,6 @@ class App extends Component {
          />
         <Quotes quotes={this.state.quotes} DeleteQuote={this.DeleteQuote} />
         <Footer />
-        <TextContext />
       </AppContext>
     );
   }

@@ -3,7 +3,7 @@ export const ContextApp = React.createContext();
 
 class AppContext extends Component{
     state = {
-        name:"funbi"
+        name:"funbi",
     }
     render(){
         return(
