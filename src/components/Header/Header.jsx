@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContextApp } from './AppContext'
+import { ContextApp } from '../Context/AppContext'
 
 const Header = (props) =>{
     return(

@@ -7,9 +7,12 @@ class AppContext extends Component{
     }
     render(){
         return(
-            <ContextApp.Provider value={this.state}>
+            <div>
+                 <ContextApp.Provider value={this.state}>
                     {this.props.children}
             </ContextApp.Provider>
+            </div>
+           
         );
     }
 }

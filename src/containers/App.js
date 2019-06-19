@@ -1,11 +1,11 @@
 import React,{Component} from 'react';
-import Input from '../components/Input';
-import Quotes from '../components/Quotes';
-import Footer from '../components/Footer';
+import Input from '../components/Input/Input';
+import Quotes from '../components/Quotes/Quotes';
+import Footer from '../components/Footer/Footer';
 
 import './App.css';
-import Header from '../components/Header'
-import AppContext from '../components/AppContext';
+import Header from '../components/Header/Header'
+import AppContext from '../components/Context/AppContext';
 
 class App extends Component {
 

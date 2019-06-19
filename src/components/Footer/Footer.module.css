@@ -1,0 +1,11 @@
+
+
+
+.text-color{
+    color:rgb(12, 55, 83)
+}
+
+.text-background{
+    width: 100%;
+    color:rgba(12, 55, 83, 0.075);
+}
